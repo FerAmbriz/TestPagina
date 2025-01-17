@@ -13,4 +13,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run a script
-      run: echo "La hora actual es $(date)"
+      run: echo "La hora actual es $(date)" > ../../index.html
