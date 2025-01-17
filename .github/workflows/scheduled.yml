@@ -14,3 +14,4 @@ jobs:
 
     - name: Run a script
       run: echo "La hora actual es $(date)" > ../../index.html
+      run: echo "Hora actual $(date)"
