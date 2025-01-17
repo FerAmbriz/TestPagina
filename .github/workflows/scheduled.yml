@@ -1,9 +1,8 @@
-name: Scheduled Job
+name: Actualizar Página
 
 on:
   schedule:
-    - cron: '*/1 * * * *' # Esto se ejecuta cada minuto
-      #- cron: '0 0 * * *' # Esto se ejecuta todos los días a medianoche
+    - cron: '*/1 * * * *'  # Ejecutar cada minuto
 
 jobs:
   build:
@@ -13,9 +12,18 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run a script
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Run script
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        echo "La hora actual es $(date)" > ../../index.html
-        echo "La hora actual es $(date)" > ../index.html
-        echo "La hora actual es $(date)" > index.html
-        echo "Hora actual $(date)"
+        python script.py
+        git config --global user.name 'FerAmbriz'
+        git config --global user.email 'fernandoambrizbarrera@gmail.com'
+        git add index.html
+        git commit -m "Actualizar página"
+        git push https://$GH_TOKEN@github.com/FerAmbriz/TestPagina.git
