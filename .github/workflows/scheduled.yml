@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '*/1 * * * *' # Esto se ejecuta cada minuto
       #- cron: '0 0 * * *' # Esto se ejecuta todos los días a medianoche
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +14,8 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run a script
-      run: echo "La hora actual es $(date)" > ../../index.html
-      run: echo "La hora actual es $(date)" > ../index.html
-      run: echo "La hora actual es $(date)" > index.html
-      run: echo "Hora actual $(date)"
+      run: |
+        echo "La hora actual es $(date)" > ../../index.html
+        echo "La hora actual es $(date)" > ../index.html
+        echo "La hora actual es $(date)" > index.html
+        echo "Hora actual $(date)"
