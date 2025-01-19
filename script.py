@@ -11,9 +11,6 @@ contenido_html = f"""
     <title>Mi Página en GitHub Pages</title>
 </head>
 <body>
-    <h1>Data LabMX </h1>
-    <p>La hora actual es: {ahora}</p>
-</body>
     <ul class="vertical">
         <li><a href="#Home"><span> AutoMethyc </span></a></li>
         <li><a href="#Base"><span2> Base quality </span2></a></li>
@@ -56,6 +53,10 @@ contenido_html = f"""
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/FerAmbriz/AutoMethyc/report/animations.js"></script>
+<div>
+    <h1>Data LabMX </h1>
+    <p>La hora actual es: {ahora}</p>
+</div>    
 </html>
 """
 
