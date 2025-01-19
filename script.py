@@ -7,12 +7,55 @@ ahora = datetime.datetime.now()
 contenido_html = f"""
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FerAmbriz/AutoMethyc/report/style.css">
     <title>Mi Página en GitHub Pages</title>
 </head>
 <body>
-    <h1>Hola, mundo!</h1>
+    <h1>Data LabMX </h1>
     <p>La hora actual es: {ahora}</p>
 </body>
+    <ul class="vertical">
+        <li><a href="#Home"><span> AutoMethyc </span></a></li>
+        <li><a href="#Base"><span2> Base quality </span2></a></li>
+        <li><a href="#Conversion"><span2> Non-conversion BS </span2></a></li>
+        <li><a href="#Alignment"><span2> Alignment quality </span2></a></li>
+        <li><a href="#Depth"><span2> Depth </span2></a></li>
+        <li><a href="#Coverage"><span2> Coverage </span2></a></li>
+        <li><a href="#CGI"><span2> CGI mapping </span2></a></li>
+        <li>
+        <a href="#Percentage"><span2> Methylation % </span2></a>
+        <ul>
+            <li style="padding-left: 20px;"><a href="#Detailed"><span3> Detailed </span3></a></li>
+            <li style="padding-left: 20px;"><a href="#MeanSite"><span3> Mean by site </span3></a></li>
+            <li style="padding-left: 20px;"><a href="#MeanGene"><span3> Mean by gene </span3></a></li>
+            <li style="padding-left: 20px;"><a href="#graph"><span3> Graph-corr </span3></a></li>
+            <li style="padding-left: 20px;"><a href="#Global"><span3> Global </span3></a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#Z-score"><span2> Z-methylation </span2></a>
+        <ul>
+            <li style="padding-left: 20px;"><a href="#NormDetailed"><span3> Detailed </span3></a></li>
+            <li style="padding-left: 20px;"><a href="#NormManhattan"><span3> Global </span3></a></li>
+            <li style="padding-left: 20px;"><a href="#MeanSiteNorm"><span3>  Mean by site </span3></a></li>
+            <li style="padding-left: 20px;"><a href="#MeanGeneNorm"><span3> Mean by gene </span3></a></li>
+            <li style="padding-left: 20px;"><a href="#Volcano"><span3> Differential </span3></a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#dimension"><span2> Dim-reduction </span2></a>
+        <ul>
+            <li style="padding-left: 20px;"><a href="#pca"><span3> PCA </span3></a></li>
+            <li style="padding-left: 20px;"><a href="#tsne"><span3> tSNE </span3></a></li>
+        </ul>
+        </li>
+        <li><a href="#roc"><span2> ROC </span2></a></li>
+        <li><a href="#snv"><span2> Variant calling </span2></a><li>
+        <li><a href="#about" style="background-color:#45B39D; border-radius: 0"><span2 style="background-color:#1c1f27; border-radius:10px" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.5)'; this.style.color='black';" onmouseout="this.style.backgroundColor='#1c1f27'; this.style.color='white';"> About </span2></a></li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/FerAmbriz/AutoMethyc/report/animations.js"></script>
 </html>
 """
 
