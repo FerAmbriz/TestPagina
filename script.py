@@ -55,7 +55,7 @@ contenido_html = f"""
     <script src="https://cdn.jsdelivr.net/gh/FerAmbriz/AutoMethyc/report/animations.js"></script>
 <div>
     <h1>Data LabMX </h1>
-    <p>La hora actual es: {ahora}</p>
+    <p style="padding-left: 25%;">La hora actual es: {ahora}</p>
 </div>    
 </html>
 """
